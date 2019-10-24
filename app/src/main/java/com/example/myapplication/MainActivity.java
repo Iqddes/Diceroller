@@ -71,17 +71,22 @@ public class MainActivity extends AppCompatActivity {
         TextView mssgoutput = this.findViewById(R.id.message);
         TextView tv = this.findViewById(R.id.NumberTextView);
         TextView inputt = this.findViewById(R.id.input);
+        TextView score1 = this.findViewById(R.id.score);
 
         int random = Integer.parseInt(tv.getText().toString());
         int inputUser = Integer.parseInt(inputt.getText().toString());
+        int score2  = Integer.parseInt(score1.getText().toString());
 
         if (random == inputUser){
             mssgoutput.setText("Congratulations!!");
-
+          score2++;
+          score1.setText(Integer.toString(score2));
         }
         else{
             mssgoutput.setText("Keep Trying");
         }
+
+
 
 
 
